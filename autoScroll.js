@@ -13,6 +13,7 @@ module.exports = async function autoScroll(page) {
                 totalHeight += distance;
                 //当滚动的总高度 大于 页面高度 说明滚到底了。也就是说到滚动条滚到底时，以上还会继续累加，直到超过页面高度
                 if (totalHeight >= scrollHeight) {
+
                     clearInterval(timer);
                     resolve();
                 }
