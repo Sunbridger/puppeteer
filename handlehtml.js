@@ -7,7 +7,6 @@ async function scrape() {
         timeout: 3000000
     });
     let aTagArr = await page.$$eval('a', (e) => e.map((a) => a.href));
-    console.log(aTagArr, '---a');
 
     await page.evaluate(() => {
         let arrAlink = [...document.querySelectorAll('a')];
